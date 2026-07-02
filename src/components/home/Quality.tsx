@@ -1,9 +1,8 @@
 import Image from "next/image";
-import { ShieldCheck, XCircle } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 import Eyebrow from "@/components/ui/Eyebrow";
-import { QUALITY_AVOID } from "@/lib/constants";
 import { PHOTOS } from "@/lib/images";
 
 export default function Quality() {
@@ -39,23 +38,6 @@ export default function Quality() {
               taleplerinde ürün adı, part number, marka, adet ve sertifika gereksinimlerini
               dikkate alarak uygun tedarik kaynakları üzerinden çalışma yürütülür.
             </p>
-
-            <div className="mt-7 rounded-2xl border border-border bg-muted p-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                Kullanılmayan ifadeler
-              </p>
-              <ul className="mt-3 space-y-2">
-                {QUALITY_AVOID.slice(0, 4).map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-secondary">
-                    <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground/50" aria-hidden />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-                Bu ifadeler ancak gerçekten belge ve yasal dayanak varsa kullanılır.
-              </p>
-            </div>
           </Reveal>
         </div>
       </Container>

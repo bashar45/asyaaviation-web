@@ -1,9 +1,8 @@
 import Image from "next/image";
-import { ShieldCheck, XCircle } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 import Eyebrow from "@/components/ui/Eyebrow";
-import { QUALITY_AVOID_EN } from "@/lib/constants";
 import { PHOTOS } from "@/lib/images";
 
 export default function Quality() {
@@ -40,24 +39,6 @@ export default function Quality() {
               brand, quantity and certificate requirements through suitable sourcing
               channels.
             </p>
-
-            <div className="mt-7 rounded-2xl border border-border bg-muted p-5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                Phrases we avoid
-              </p>
-              <ul className="mt-3 space-y-2">
-                {QUALITY_AVOID_EN.slice(0, 4).map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-secondary">
-                    <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground/50" aria-hidden />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-                These statements are only used when genuinely backed by documentation and
-                legal grounds.
-              </p>
-            </div>
           </Reveal>
         </div>
       </Container>

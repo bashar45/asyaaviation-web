@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { XCircle } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 import PageHero from "@/components/ui/PageHero";
 import WaButton from "@/components/ui/WaButton";
-import { QUALITY_AVOID, WA_MESSAGES, waLink } from "@/lib/constants";
+import { WA_MESSAGES, waLink } from "@/lib/constants";
 import { PHOTOS } from "@/lib/images";
 
 export const metadata: Metadata = {
@@ -60,25 +59,6 @@ export default function QualityPage() {
               </div>
             </Reveal>
           </div>
-
-          <Reveal delay={0.16}>
-            <div className="mt-14 rounded-2xl border border-border bg-muted p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                Sakınılması gereken iddialar
-              </p>
-              <div className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-                {QUALITY_AVOID.map((item) => (
-                  <div key={item} className="flex items-start gap-2 text-sm text-secondary">
-                    <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground/50" aria-hidden />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-                Bu ifadeler ancak gerçekten belge ve yasal dayanak varsa kullanılmalıdır.
-              </p>
-            </div>
-          </Reveal>
         </Container>
       </section>
     </>
