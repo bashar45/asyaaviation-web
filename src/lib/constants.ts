@@ -325,6 +325,21 @@ export const MARKET_DISCLAIMER =
 export const MARKET_DISCLAIMER_EN =
   "Company and brand names are used solely to describe the industry, market and product scope. This is not an official reference, customer relationship, distributorship, agency or business partnership statement.";
 
+// Example civil aviation companies representing the markets/regions we target.
+// Names/logos are illustrative of the sector and regions, not confirmed customers — see MARKET_DISCLAIMER.
+export const MARKET_AIRLINES = [
+  { name: "Turkish Airlines", logo: "/images/market-examples/turkish-airlines.svg" },
+  { name: "Pegasus Airlines", logo: "/images/market-examples/pegasus-airlines.svg" },
+  { name: "AJet", logo: "/images/market-examples/ajet.svg" },
+  { name: "SunExpress", logo: "/images/market-examples/sunexpress.svg" },
+  { name: "Air Astana", logo: "/images/market-examples/air-astana.png" },
+  { name: "Azerbaijan Airlines", logo: "/images/market-examples/azerbaijan-airlines.svg" },
+  { name: "SCAT Airlines", logo: "/images/market-examples/scat-airlines.svg" },
+  { name: "flydubai", logo: "/images/market-examples/flydubai.svg" },
+  { name: "Air Arabia", logo: "/images/market-examples/air-arabia.svg" },
+  { name: "Wizz Air", logo: "/images/market-examples/wizz-air.svg" },
+];
+
 export const SUPPLY_STEPS = [
   {
     title: "Talebin İletilmesi",

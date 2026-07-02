@@ -6,6 +6,7 @@ import Reveal from "@/components/ui/Reveal";
 import PageHero from "@/components/ui/PageHero";
 import WaButton from "@/components/ui/WaButton";
 import {
+  MARKET_AIRLINES,
   MARKET_DISCLAIMER_EN,
   MARKET_REGIONS_EN,
   MARKET_SEGMENTS_EN,
@@ -70,8 +71,30 @@ export default function MarketsPageEn() {
             </Reveal>
           </div>
 
-          <Reveal delay={0.16}>
-            <div className="mt-14 flex flex-col items-start gap-6 rounded-2xl border border-border bg-muted p-6 sm:flex-row sm:items-center sm:justify-between">
+          <Reveal delay={0.14}>
+            <h2 className="mt-16 text-2xl font-semibold text-primary">
+              Example Airlines from the Industry
+            </h2>
+            <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+              {MARKET_AIRLINES.map((airline) => (
+                <div
+                  key={airline.name}
+                  className="group flex h-20 items-center justify-center rounded-xl border border-border bg-white px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/30 hover:shadow-lg"
+                >
+                  <Image
+                    src={airline.logo}
+                    alt={airline.name}
+                    width={120}
+                    height={36}
+                    className="h-auto max-h-7 w-auto max-w-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="mt-8 flex flex-col items-start gap-6 rounded-2xl border border-border bg-muted p-6 sm:flex-row sm:items-center sm:justify-between">
               <p className="max-w-2xl text-xs leading-relaxed text-muted-foreground">
                 {MARKET_DISCLAIMER_EN}
               </p>
