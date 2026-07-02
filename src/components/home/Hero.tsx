@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Layers, Globe2, MessageCircle } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 import WaButton from "@/components/ui/WaButton";
@@ -72,19 +72,25 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={0.34}>
-          <dl className="mt-20 grid max-w-2xl grid-cols-3 gap-6 border-t border-white/10 pt-8">
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-white/45">Ürün Grubu</dt>
-              <dd className="mt-1 text-2xl font-semibold text-white">9+</dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-white/45">Hedef Pazar</dt>
-              <dd className="mt-1 text-2xl font-semibold text-white">4 Bölge</dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-white/45">İletişim</dt>
-              <dd className="mt-1 text-2xl font-semibold text-white">WhatsApp</dd>
-            </div>
+          <dl className="mt-16 flex flex-wrap gap-3">
+            {[
+              { icon: Layers, value: "9+", label: "Ürün Grubu" },
+              { icon: Globe2, value: "4 Bölge", label: "Hedef Pazar" },
+              { icon: MessageCircle, value: "WhatsApp", label: "İletişim" },
+            ].map(({ icon: Icon, value, label }) => (
+              <div
+                key={label}
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-3.5 backdrop-blur-sm"
+              >
+                <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-accent-light">
+                  <Icon className="h-4 w-4" aria-hidden />
+                </span>
+                <div>
+                  <dd className="text-base font-semibold text-white">{value}</dd>
+                  <dt className="text-xs text-white/45">{label}</dt>
+                </div>
+              </div>
+            ))}
           </dl>
         </Reveal>
       </Container>
