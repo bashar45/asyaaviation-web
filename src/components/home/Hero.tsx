@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { ArrowRight, Layers, Globe2, MessageCircle } from "lucide-react";
+import { ArrowRight, Layers, Plane, Phone, Mail } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 import WaButton from "@/components/ui/WaButton";
 import HeroJetVisual from "@/components/home/HeroJetVisual";
 import { PHOTOS } from "@/lib/images";
-import { WA_MESSAGES, waLink } from "@/lib/constants";
+import { SITE, WA_MESSAGES, waLink } from "@/lib/constants";
 
 export default function Hero() {
   return (
@@ -74,9 +74,8 @@ export default function Hero() {
         <Reveal delay={0.34}>
           <dl className="mt-16 flex flex-wrap gap-3">
             {[
-              { icon: Layers, value: "9+", label: "Ürün Grubu" },
-              { icon: Globe2, value: "4 Bölge", label: "Hedef Pazar" },
-              { icon: MessageCircle, value: "WhatsApp", label: "İletişim" },
+              { icon: Layers, value: "25.000+", label: "Ürün Çeşidi" },
+              { icon: Plane, value: "35+", label: "Sivil Havayolu" },
             ].map(({ icon: Icon, value, label }) => (
               <div
                 key={label}
@@ -91,6 +90,28 @@ export default function Hero() {
                 </div>
               </div>
             ))}
+
+            <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-3.5 backdrop-blur-sm">
+              <div className="flex items-center gap-2.5">
+                <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-accent-light">
+                  <Phone className="h-4 w-4" aria-hidden />
+                </span>
+                <div>
+                  <dd className="text-sm font-semibold text-white">{SITE.phoneDisplay}</dd>
+                  <dt className="text-xs text-white/45">Telefon</dt>
+                </div>
+              </div>
+              <div className="h-8 w-px bg-white/10" aria-hidden />
+              <div className="flex items-center gap-2.5">
+                <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-accent-light">
+                  <Mail className="h-4 w-4" aria-hidden />
+                </span>
+                <div>
+                  <dd className="text-sm font-semibold text-white">{SITE.email ?? "Yakında"}</dd>
+                  <dt className="text-xs text-white/45">E-posta</dt>
+                </div>
+              </div>
+            </div>
           </dl>
         </Reveal>
       </Container>

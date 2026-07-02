@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Asian Havacılık",
   tagline: "Aviation Supply Solutions",
-  url: "https://asianhavacilik.com",
+  url: "https://asyaaviation.com",
   phoneDisplay: "+90 532 134 58 40",
   phoneIntl: "905321345840",
   email: null as string | null, // TBD — netleşince eklenecek
