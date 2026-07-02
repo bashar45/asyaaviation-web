@@ -41,17 +41,17 @@ export default function Hero() {
         </Reveal>
         <Reveal delay={0.08}>
           <h1 className="mt-6 max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
-            Asian Havacılık
+            Asia Havacılık
           </h1>
         </Reveal>
         <Reveal delay={0.14}>
           <p className="mt-4 max-w-2xl text-xl font-medium text-accent-light sm:text-2xl">
-            Sivil Havacılık İçin Güvenilir Malzeme Tedariki
+            Her Parça, Her Zaman, Her Uçak
           </p>
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
-            Yurtdışı tedarikçi ağımız üzerinden havacılık yedek parça, sarf malzeme, teknik
+            Sivil Havacılık İçin Güvenilir Malzeme Tedariki. Yurtdışı tedarikçi ağımız üzerinden havacılık yedek parça, sarf malzeme, teknik
             ekipman ve bakım ürünlerinin temini konusunda sivil havacılık firmalarına çözüm
             sunuyoruz.
           </p>
