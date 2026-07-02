@@ -3,7 +3,6 @@ import { ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 import WaButton from "@/components/ui/WaButton";
-import FlightPath from "@/components/home/FlightPath";
 import HeroJetVisual from "@/components/home/HeroJetVisual";
 import { PHOTOS } from "@/lib/images";
 import { WA_MESSAGES_EN, waLink } from "@/lib/constants";
@@ -33,7 +32,6 @@ export default function Hero() {
       </div>
 
       <HeroJetVisual />
-      <FlightPath />
 
       <Container className="relative py-28 sm:py-36 lg:py-44">
         <Reveal>

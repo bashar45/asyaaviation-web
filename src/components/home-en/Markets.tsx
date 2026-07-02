@@ -38,25 +38,21 @@ export default function Markets() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="relative">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
-                <Image
-                  src={PHOTOS.wing}
-                  alt="Modern aircraft engine and wing detail"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent" />
-              </div>
-              <div className="absolute -bottom-6 -left-6 hidden w-64 rounded-2xl border border-border bg-white p-5 shadow-xl sm:block">
-                <div className="grid grid-cols-2 gap-4">
-                  {MARKET_REGIONS_EN.map((region) => (
-                    <div key={region.name}>
-                      <p className="text-sm font-semibold text-primary">{region.name}</p>
-                    </div>
-                  ))}
-                </div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
+              <Image
+                src={PHOTOS.wing}
+                alt="Modern aircraft engine and wing detail"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 grid grid-cols-2 gap-x-4 gap-y-2 p-6">
+                {MARKET_REGIONS_EN.map((region) => (
+                  <p key={region.name} className="text-sm font-semibold text-white">
+                    {region.name}
+                  </p>
+                ))}
               </div>
             </div>
           </Reveal>
