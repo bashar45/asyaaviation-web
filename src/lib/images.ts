@@ -10,4 +10,5 @@ export const PHOTOS = {
   engineDetail: pexels(459402, 1200), // jet engine close-up, monochrome
   runway: pexels(19538096, 1600), // airplane on runway, small airport
   cargo: pexels(19331895, 1600), // cargo airplane at airport
+  heroJet: pexels(1493756, 1800), // airliner climbing against deep blue sky, worm's eye view
 };
